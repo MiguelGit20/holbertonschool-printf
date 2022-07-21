@@ -1,27 +1,23 @@
-#include <main.h>
+#include "main.h"
 /**
  *
  *
  */
-int (*get_fmt_fun(char *format))(va_list);
+int (*get_fmt_fun(const char *format))(va_list)
 {
-	frt format_type[] = {
+	fr_t format_type[] = {
 		{"c", c_fun},
-		{"d", d_fun},
 		{"s", s_fun},
-		{"i", i_fun},
 		{"%", p_fun},
-		{"b", b_fun},
-		{NULL, NULL}};
+		{NULL, NULL}
+	};
 
 	int iterator = 0;
 
-	while (format_type[iterator].ft != NULL)
+	for (;format_type[iterator].ft; iterator++)
 	{
-		if (*(format_type[iterator].ft) == format[0])
+		if (*format == *(format_type[iterator].ft))
 			return (format_type[iterator].f);
-
-		iterator++;
 	}
 	return (NULL);
 }

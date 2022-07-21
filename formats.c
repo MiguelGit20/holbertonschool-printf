@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  *s_fun - it prints the lenght of a string
  *@pmt: argument
@@ -7,14 +8,13 @@
 int s_fun(va_list pmt)
 {
 	int i;
-	char *s;
 
-	s = va_arg(pmt, char*);
+	char *s = va_arg(pmt, char *);
 
 	if (!s)
 		s = "(null)";
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i]; i++)
 		_putchar(i);
 
 	return (i);
@@ -29,7 +29,7 @@ int c_fun(va_list pmt)
 {
 	char c;
 
-	c = va_arg(pmt, char)
+	c = va_arg(pmt, int);
 	_putchar(c);
 
 	return (c);
@@ -42,6 +42,6 @@ int c_fun(va_list pmt)
  */
 int p_fun(va_list pmt)
 {
-	(void)arg;
+	(void)pmt;
 	return (write(1, "%", 1));
 }

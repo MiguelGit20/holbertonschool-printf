@@ -1,5 +1,5 @@
-#ifndef MAIN.H
-#define MAIN.H
+#ifndef MAIN_H
+#define MAIN_H
 
 #include "main.h"
 #include <stdio.h>
@@ -18,10 +18,15 @@
 typedef struct format
 {
 	char *ft;
-	int (*f)(int a, int b);
+	int (*f)(va_list);
 
 } fr_t;
 
+int (*get_fmt_fun(const char *format))(va_list);
+int _putchar(char c);
 int _printf(const char *format, ...);
+int c_fun(va_list pmt);
+int s_fun(va_list pmt);
+int p_fun(va_list pmt);
 
-#endif
+#endif /* MAIN_H*/
