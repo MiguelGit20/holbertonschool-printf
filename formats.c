@@ -7,15 +7,15 @@
  */
 int s_fun(va_list pmt)
 {
-	int i;
+	int i = 0;
 
 	char *s = va_arg(pmt, char *);
 
 	if (!s)
 		s = "(null)";
 
-	for (i = 0; s[i]; i++)
-		_putchar(i);
+	while (s[i])
+		_putchar(s[i++]);
 
 	return (i);
 }
@@ -44,4 +44,40 @@ int p_fun(va_list pmt)
 {
 	(void)pmt;
 	return (write(1, "%", 1));
+}
+
+/**
+ *d_fun - it prints an integer
+ *@pmt: argument
+ *Return:
+ */
+int d_fun(va_list pmt)
+{
+	int n = va_arg(pmt, int);
+	int d, len;
+	unsigned int num;
+	
+	d = 1;
+	len = 0;
+	num = n;
+
+	if (n < 0)
+	{
+		_putchar('-');
+		len++;
+		num = -n;
+	}
+
+	while (num / d > 9)
+		d = d * 10;
+
+	while (d != 0)
+	{
+		_putchar('0' + num / d);
+		len++;
+		num = num % d;
+		d = d / 10;
+	}
+	return (len);
+
 }

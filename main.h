@@ -28,5 +28,6 @@ int _printf(const char *format, ...);
 int c_fun(va_list pmt);
 int s_fun(va_list pmt);
 int p_fun(va_list pmt);
+int d_fun(va_list pmt);
 
 #endif /* MAIN_H*/
