@@ -12,9 +12,7 @@ int _printf(const char *format, ...)
 
 	if (!format)
 		return (-1);
-
 	va_start(pmt, format);
-
 	while (format[iterator])
 	{
 		for (; format[iterator] != '%' && format[iterator]; iterator++)
@@ -33,7 +31,6 @@ int _printf(const char *format, ...)
 		}
 		if (!format[iterator + 1])
 			return (-1);
-
 		_putchar(format[iterator]);
 		counter++;
 		if (format[iterator + 1] == '%')
@@ -41,9 +38,8 @@ int _printf(const char *format, ...)
 			_putchar('%');
 			iterator = iterator + 2;
 		}
-		else 
+		else
 			iterator++;
-
 	}
 	va_end(pmt);
 	return (counter);

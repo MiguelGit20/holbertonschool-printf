@@ -32,7 +32,7 @@ int c_fun(va_list pmt)
 	c = va_arg(pmt, int);
 	_putchar(c);
 
-	return (c);
+	return (1);
 }
 
 /**
@@ -49,14 +49,14 @@ int p_fun(va_list pmt)
 /**
  *d_fun - it prints an integer
  *@pmt: argument
- *Return:
+ *Return: len
  */
 int d_fun(va_list pmt)
 {
 	int n = va_arg(pmt, int);
 	int d, len;
 	unsigned int num;
-	
+
 	d = 1;
 	len = 0;
 	num = n;

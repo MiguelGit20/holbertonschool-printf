@@ -10,11 +10,10 @@
 #include <unistd.h>
 
 /**
- *struct op - struct to find the format
- *@ft - format
- *@f - function it points to
+ *struct format - struct to find the format
+ *@ft: format
+ *@f: function it points to
  */
-
 typedef struct format
 {
 	char *ft;

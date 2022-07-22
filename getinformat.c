@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- *
- *
+ *get_fmt_fun - get the exact function to the format
+ *@format: format
+ *Return: function
  */
 int (*get_fmt_fun(const char *format))(va_list)
 {
@@ -16,7 +17,7 @@ int (*get_fmt_fun(const char *format))(va_list)
 
 	int iterator = 0;
 
-	for (;format_type[iterator].ft != NULL; iterator++)
+	for (; format_type[iterator].ft != NULL; iterator++)
 	{
 		if (*(format_type[iterator].ft) == *format)
 			break;
