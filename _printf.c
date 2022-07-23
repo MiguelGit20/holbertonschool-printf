@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *_printf - function that produces output according to a format
- *Return: the number of characters printed
+ *Return: number of characters printed
  *@format:format
  */
 int _printf(const char *format, ...)
