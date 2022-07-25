@@ -8,7 +8,6 @@
 #include <stdarg.h>
 #include <limits.h>
 #include <unistd.h>
-
 /**
  *struct format - struct to find the format
  *@ft: format
