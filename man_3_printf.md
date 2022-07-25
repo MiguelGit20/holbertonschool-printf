@@ -1,4 +1,4 @@
-% _printf fucntion
+% _printf
 % Meliza Posada Arias - Miguel Angel Torres Arango
 % July 2022
 
@@ -6,7 +6,7 @@
 
 	_printf - a library function to send formatted output to the screen.
 
-#SYNOPSIS
+# SYNOPSIS
 
 	int _printf(const char *format, …)
 	_printf[argument]…
