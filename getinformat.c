@@ -23,5 +23,4 @@ int (*get_fmt_fun(const char *format))(va_list)
 			break;
 	}
 	return (format_type[iterator].f);
-
 }
