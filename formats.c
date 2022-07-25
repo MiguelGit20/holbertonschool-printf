@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  *s_fun - it prints the lenght of a string
  *@pmt: argument
